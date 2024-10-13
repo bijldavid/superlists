@@ -44,6 +44,7 @@
   --color-secondary: #6b66da;
 
   --border-primary: rgba(216, 214, 227, 0.446);
+  --border-secondary: rgba(95, 92, 101, 0.446);
 }
 
 /* CSS reset */
@@ -247,7 +248,8 @@ main.trigger {
 .demo>div {
   background-color: var(--background-white);
   border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle blurry shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  /* Subtle blurry shadow */
 }
 
 
@@ -582,7 +584,7 @@ main.trigger {
 }
 
 .slides>div>div {
-  height: 45vw;
+  height: 55vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -813,13 +815,6 @@ main.trigger {
   color: var(--color-primary);
 }
 
-
-/* .hover-text>div>div div {
-  display: flex;
-  align-items: center;
-  gap: 3em;
-} */
-
 .hover-text>div>div div p {
   position: absolute;
   top: 50%;
@@ -832,6 +827,61 @@ main.trigger {
   transition: all 0.4s ease;
 }
 
-.hover-text>div>div div h4:hover + p {
+.hover-text>div>div div h4:hover+p {
   opacity: 1;
+}
+
+.hover-text>div>p {
+  padding-top: 4em;
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: var(--text-white);
+  opacity: 0.12;
+}
+
+
+/* ------------ ---- ------------ */
+/* ------------ ---- ------------ */
+/* ------------ TEST ------------ */
+/* ------------ ---- ------------ */
+/* ------------ ---- ------------ */
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  background-color: var(--background-black);
+  padding: 5em 0;
+}
+
+.testimonials>div:nth-of-type(1) {
+  max-width: 15em;
+}
+
+.testimonials>div:nth-of-type(2) {
+  max-width: 30em;
+}
+
+.testimonials>div div {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.testimonials>div div span {
+  display: block;
+  height: 25px;
+  width: 1px;
+  background-color: var(--border-secondary);
+}
+
+.testimonials>div div img {
+  height: 25px;
+  width: auto;
+}
+
+.testimonials>div div h3 {
+  font-size: .9rem;
+  font-weight: 200;
+  color: var(--text-white);
 }
